@@ -1,0 +1,8 @@
+<div>
+  <div *ngFor="let song of songs,let i = index" (click)="changeMusic(i)">
+    <span>{{song}}</span>
+  </div>
+  <p>{{name}}</p>
+  <app-audio [music]="url" (outputChange)="changeMusic($event)"></app-audio>
+</div>
+
